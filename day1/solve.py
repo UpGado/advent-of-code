@@ -6,7 +6,7 @@ def fuel(mass):
 
 
 def fuel_with_fuel(mass):
-    return 0 if fuel(mass) <= 0 else fuel(mass) + fuel_with_fuel(fuel(mass))
+    return 0 if fuel(mass) <= 0 else (f:=fuel(mass)) + fuel_with_fuel(f)
 
 
 # use fuel instead of fuel_with_fuel for part 1
