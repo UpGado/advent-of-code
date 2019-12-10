@@ -1,12 +1,13 @@
-import math
+from math import floor
 
 
 def fuel(mass):
-    return math.floor(mass/3)-2
+    return floor(mass/3)-2
 
 
 def fuel_with_fuel(mass):
-    return 0 if fuel(mass) <= 0 else (f:=fuel(mass)) + fuel_with_fuel(f)
+    f = fuel(mass)
+    return 0 if f <= 0 else f + fuel_with_fuel(f)
 
 
 # use fuel instead of fuel_with_fuel for part 1
