@@ -1,2 +1,2 @@
 more-itertools==8.0.2
-numpy==1.17.4
+numpy==1.22.0
